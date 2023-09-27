@@ -279,3 +279,67 @@ Thus, drone[arrOfKeys[i]] was evaluated to drone["speed"] which is equal to 100
 This allowed me to loop over each of the values stored inside the drone object, based on each of its properties' keys.
 
 */
+
+
+
+
+/* --------------------------------  ARRAYS ARE OBJECTS ------------------------  */
+
+
+
+/*By the end of this reading, you'll be able to:
+
+Explain that arrays are objects, with their own built-in properties and methods
+
+Outline the common way to extend arrays using the push() method
+
+and explain how to trim the last member of an array using the pop() method*/
+
+/*In JavaScript, arrays are objects. That means that arrays also have some built-in properties and methods.
+
+One of the most commonly used built-in methods on arrays are the push() and the pop() methods.
+
+To add new items to an array, I can use the "push()"" method:
+
+To remove the last item from an array, I can use the "pop()" method:  */
+
+var fruits = [];
+fruits.push("apple"); // ['apple']
+fruits.push('pear'); // ['apple', 'pear']
+console.log(fruits); 
+
+fruits.pop();
+console.log(fruits); // ['apple']
+//------------------------------------------------------------------------------------------------------------------------------------
+
+/*
+
+Tying into some earlier lessons in this course, I can now build a "function" that takes all its arguments and pushes them into an array, like this: */
+
+function arrayBuilder(one, two, three) {
+    var arr = [];
+    arr.push(one);                                      
+    arr.push(two);
+    arr.push(three);
+    //console.log(arr);
+    return arr;
+}
+                                                                //I can now call the arrayBuilder() function, for example, like this:  
+arrayBuilder()
+arrayBuilder('apple', 'pear', 'plum');                              // ['apple', 'pear', 'plum'] 
+
+                                                                /*Additionally, I can save this function call to a variable. 
+
+                                                                I can name it anything, but this time I'll use the name: simpleArr.*/
+
+var simpleArr = arrayBuilder('apple', 'pear', 'plum'); 
+
+                                                                //And now I can console log the values stored in simpleArr:  
+console.log(simpleArr); // ['apple','pear','plum']
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+/* The math object is really useful when using some of its built in methods, one of which is the random method. For example, 
+this method allows you to generate a decimal number between 0 and 0.99.*/
+
